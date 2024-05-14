@@ -7,18 +7,17 @@ import { BsCloudHaze2Fill, BsCloudDrizzleFill, BsEye, BsWater, BsThermometer, Bs
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
 import { useEffect, useState } from "react";
-import { DiVim } from "react-icons/di";
 
 // api key
 const APIkey = "d37280ed18ab61b5f0632a932206c1eb";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const [location, setLocation] = useState("Bucharest");
   const [inputValue, setInputValue] = useState("");
   const [animate, setAnimate] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState<any>("");
 
   const handleInput = (e: any) => {
     setInputValue(e.target.value);
@@ -32,7 +31,7 @@ function App() {
     }
 
     // select input
-    const input = document.querySelector("input");
+    const input = document.querySelector<any>("input");
 
     // if input value is empty
     if (input.value === "") {
